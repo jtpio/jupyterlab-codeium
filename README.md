@@ -11,6 +11,9 @@ https://github.com/jtpio/jupyterlab-codeium/assets/591645/7ec0a6fa-9c51-49a8-89b
 
 ## ✨ Try it in your browser ✨
 
+1. Follow the instructions in the [Usage](#usage) section to get your API key.
+2. Open https://jtpio.github.io/jupyterlab-codeium in your browser
+
 ## Requirements
 
 - JupyterLab >= 4.1.0
