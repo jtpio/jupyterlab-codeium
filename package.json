@@ -1,7 +1,7 @@
 {
     "name": "jupyterlab-codeium",
-    "version": "0.1.0",
-    "description": "A JupyterLab extension to get AI code completion with codeium",
+    "version": "0.0.1",
+    "description": "A JupyterLab extension to get AI code completions with Codeium",
     "keywords": [
         "jupyter",
         "jupyterlab",
