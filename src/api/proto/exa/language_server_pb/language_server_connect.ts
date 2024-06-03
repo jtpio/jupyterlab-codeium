@@ -5,42 +5,48 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptCompletionRequest, AcceptCompletionResponse, GetAuthTokenRequest, GetAuthTokenResponse, GetCompletionsRequest, GetCompletionsResponse } from "./language_server_pb";
-import { MethodKind } from "@bufbuild/protobuf";
+import {
+  AcceptCompletionRequest,
+  AcceptCompletionResponse,
+  GetAuthTokenRequest,
+  GetAuthTokenResponse,
+  GetCompletionsRequest,
+  GetCompletionsResponse
+} from './language_server_pb';
+import { MethodKind } from '@bufbuild/protobuf';
 
 /**
  * @generated from service exa.language_server_pb.LanguageServerService
  */
 export const LanguageServerService = {
-  typeName: "exa.language_server_pb.LanguageServerService",
+  typeName: 'exa.language_server_pb.LanguageServerService',
   methods: {
     /**
      * @generated from rpc exa.language_server_pb.LanguageServerService.GetCompletions
      */
     getCompletions: {
-      name: "GetCompletions",
+      name: 'GetCompletions',
       I: GetCompletionsRequest,
       O: GetCompletionsResponse,
-      kind: MethodKind.Unary,
+      kind: MethodKind.Unary
     },
     /**
      * @generated from rpc exa.language_server_pb.LanguageServerService.AcceptCompletion
      */
     acceptCompletion: {
-      name: "AcceptCompletion",
+      name: 'AcceptCompletion',
       I: AcceptCompletionRequest,
       O: AcceptCompletionResponse,
-      kind: MethodKind.Unary,
+      kind: MethodKind.Unary
     },
     /**
      * @generated from rpc exa.language_server_pb.LanguageServerService.GetAuthToken
      */
     getAuthToken: {
-      name: "GetAuthToken",
+      name: 'GetAuthToken',
       I: GetAuthTokenRequest,
       O: GetAuthTokenResponse,
-      kind: MethodKind.Unary,
-    },
+      kind: MethodKind.Unary
+    }
   }
 } as const;
-

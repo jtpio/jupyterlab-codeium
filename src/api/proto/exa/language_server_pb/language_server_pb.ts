@@ -5,9 +5,23 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { Completion, CompletionSource, EditorOptions, ExperimentKey, Language, Metadata } from "../codeium_common_pb/codeium_common_pb";
+import type {
+  BinaryReadOptions,
+  FieldList,
+  JsonReadOptions,
+  JsonValue,
+  PartialMessage,
+  PlainMessage
+} from '@bufbuild/protobuf';
+import { Message, proto3, protoInt64 } from '@bufbuild/protobuf';
+import {
+  Completion,
+  CompletionSource,
+  EditorOptions,
+  ExperimentKey,
+  Language,
+  Metadata
+} from '../codeium_common_pb/codeium_common_pb';
 
 /**
  * @generated from enum exa.language_server_pb.CodeiumState
@@ -41,16 +55,16 @@ export enum CodeiumState {
   /**
    * @generated from enum value: CODEIUM_STATE_ERROR = 5;
    */
-  ERROR = 5,
+  ERROR = 5
 }
 // Retrieve enum metadata with: proto3.getEnumType(CodeiumState)
-proto3.util.setEnumType(CodeiumState, "exa.language_server_pb.CodeiumState", [
-  { no: 0, name: "CODEIUM_STATE_UNSPECIFIED" },
-  { no: 1, name: "CODEIUM_STATE_INACTIVE" },
-  { no: 2, name: "CODEIUM_STATE_PROCESSING" },
-  { no: 3, name: "CODEIUM_STATE_SUCCESS" },
-  { no: 4, name: "CODEIUM_STATE_WARNING" },
-  { no: 5, name: "CODEIUM_STATE_ERROR" },
+proto3.util.setEnumType(CodeiumState, 'exa.language_server_pb.CodeiumState', [
+  { no: 0, name: 'CODEIUM_STATE_UNSPECIFIED' },
+  { no: 1, name: 'CODEIUM_STATE_INACTIVE' },
+  { no: 2, name: 'CODEIUM_STATE_PROCESSING' },
+  { no: 3, name: 'CODEIUM_STATE_SUCCESS' },
+  { no: 4, name: 'CODEIUM_STATE_WARNING' },
+  { no: 5, name: 'CODEIUM_STATE_ERROR' }
 ]);
 
 /**
@@ -70,13 +84,13 @@ export enum LineType {
   /**
    * @generated from enum value: LINE_TYPE_MULTI = 2;
    */
-  MULTI = 2,
+  MULTI = 2
 }
 // Retrieve enum metadata with: proto3.getEnumType(LineType)
-proto3.util.setEnumType(LineType, "exa.language_server_pb.LineType", [
-  { no: 0, name: "LINE_TYPE_UNSPECIFIED" },
-  { no: 1, name: "LINE_TYPE_SINGLE" },
-  { no: 2, name: "LINE_TYPE_MULTI" },
+proto3.util.setEnumType(LineType, 'exa.language_server_pb.LineType', [
+  { no: 0, name: 'LINE_TYPE_UNSPECIFIED' },
+  { no: 1, name: 'LINE_TYPE_SINGLE' },
+  { no: 2, name: 'LINE_TYPE_MULTI' }
 ]);
 
 /**
@@ -107,15 +121,19 @@ export enum CompletionPartType {
    *
    * @generated from enum value: COMPLETION_PART_TYPE_INLINE_MASK = 3;
    */
-  INLINE_MASK = 3,
+  INLINE_MASK = 3
 }
 // Retrieve enum metadata with: proto3.getEnumType(CompletionPartType)
-proto3.util.setEnumType(CompletionPartType, "exa.language_server_pb.CompletionPartType", [
-  { no: 0, name: "COMPLETION_PART_TYPE_UNSPECIFIED" },
-  { no: 1, name: "COMPLETION_PART_TYPE_INLINE" },
-  { no: 2, name: "COMPLETION_PART_TYPE_BLOCK" },
-  { no: 3, name: "COMPLETION_PART_TYPE_INLINE_MASK" },
-]);
+proto3.util.setEnumType(
+  CompletionPartType,
+  'exa.language_server_pb.CompletionPartType',
+  [
+    { no: 0, name: 'COMPLETION_PART_TYPE_UNSPECIFIED' },
+    { no: 1, name: 'COMPLETION_PART_TYPE_INLINE' },
+    { no: 2, name: 'COMPLETION_PART_TYPE_BLOCK' },
+    { no: 3, name: 'COMPLETION_PART_TYPE_INLINE_MASK' }
+  ]
+);
 
 /**
  * @generated from message exa.language_server_pb.MultilineConfig
@@ -135,24 +153,36 @@ export class MultilineConfig extends Message<MultilineConfig> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.MultilineConfig";
+  static readonly typeName = 'exa.language_server_pb.MultilineConfig';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "threshold", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
+    { no: 1, name: 'threshold', kind: 'scalar', T: 2 /* ScalarType.FLOAT */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MultilineConfig {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): MultilineConfig {
     return new MultilineConfig().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MultilineConfig {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): MultilineConfig {
     return new MultilineConfig().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MultilineConfig {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): MultilineConfig {
     return new MultilineConfig().fromJsonString(jsonString, options);
   }
 
-  static equals(a: MultilineConfig | PlainMessage<MultilineConfig> | undefined, b: MultilineConfig | PlainMessage<MultilineConfig> | undefined): boolean {
+  static equals(
+    a: MultilineConfig | PlainMessage<MultilineConfig> | undefined,
+    b: MultilineConfig | PlainMessage<MultilineConfig> | undefined
+  ): boolean {
     return proto3.util.equals(MultilineConfig, a, b);
   }
 }
@@ -191,7 +221,7 @@ export class GetCompletionsRequest extends Message<GetCompletionsRequest> {
   /**
    * @generated from field: string model_name = 10;
    */
-  modelName = "";
+  modelName = '';
 
   /**
    * @generated from field: exa.language_server_pb.MultilineConfig multiline_config = 13;
@@ -204,30 +234,53 @@ export class GetCompletionsRequest extends Message<GetCompletionsRequest> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.GetCompletionsRequest";
+  static readonly typeName = 'exa.language_server_pb.GetCompletionsRequest';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "metadata", kind: "message", T: Metadata },
-    { no: 2, name: "document", kind: "message", T: Document },
-    { no: 3, name: "editor_options", kind: "message", T: EditorOptions },
-    { no: 5, name: "other_documents", kind: "message", T: Document, repeated: true },
-    { no: 7, name: "experiment_config", kind: "message", T: ExperimentConfig },
-    { no: 10, name: "model_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 13, name: "multiline_config", kind: "message", T: MultilineConfig },
+    { no: 1, name: 'metadata', kind: 'message', T: Metadata },
+    { no: 2, name: 'document', kind: 'message', T: Document },
+    { no: 3, name: 'editor_options', kind: 'message', T: EditorOptions },
+    {
+      no: 5,
+      name: 'other_documents',
+      kind: 'message',
+      T: Document,
+      repeated: true
+    },
+    { no: 7, name: 'experiment_config', kind: 'message', T: ExperimentConfig },
+    {
+      no: 10,
+      name: 'model_name',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 13, name: 'multiline_config', kind: 'message', T: MultilineConfig }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetCompletionsRequest {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): GetCompletionsRequest {
     return new GetCompletionsRequest().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetCompletionsRequest {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): GetCompletionsRequest {
     return new GetCompletionsRequest().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetCompletionsRequest {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): GetCompletionsRequest {
     return new GetCompletionsRequest().fromJsonString(jsonString, options);
   }
 
-  static equals(a: GetCompletionsRequest | PlainMessage<GetCompletionsRequest> | undefined, b: GetCompletionsRequest | PlainMessage<GetCompletionsRequest> | undefined): boolean {
+  static equals(
+    a: GetCompletionsRequest | PlainMessage<GetCompletionsRequest> | undefined,
+    b: GetCompletionsRequest | PlainMessage<GetCompletionsRequest> | undefined
+  ): boolean {
     return proto3.util.equals(GetCompletionsRequest, a, b);
   }
 }
@@ -254,25 +307,46 @@ export class GetCompletionsResponse extends Message<GetCompletionsResponse> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.GetCompletionsResponse";
+  static readonly typeName = 'exa.language_server_pb.GetCompletionsResponse';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "state", kind: "message", T: State },
-    { no: 2, name: "completion_items", kind: "message", T: CompletionItem, repeated: true },
+    { no: 1, name: 'state', kind: 'message', T: State },
+    {
+      no: 2,
+      name: 'completion_items',
+      kind: 'message',
+      T: CompletionItem,
+      repeated: true
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetCompletionsResponse {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): GetCompletionsResponse {
     return new GetCompletionsResponse().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetCompletionsResponse {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): GetCompletionsResponse {
     return new GetCompletionsResponse().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetCompletionsResponse {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): GetCompletionsResponse {
     return new GetCompletionsResponse().fromJsonString(jsonString, options);
   }
 
-  static equals(a: GetCompletionsResponse | PlainMessage<GetCompletionsResponse> | undefined, b: GetCompletionsResponse | PlainMessage<GetCompletionsResponse> | undefined): boolean {
+  static equals(
+    a:
+      | GetCompletionsResponse
+      | PlainMessage<GetCompletionsResponse>
+      | undefined,
+    b: GetCompletionsResponse | PlainMessage<GetCompletionsResponse> | undefined
+  ): boolean {
     return proto3.util.equals(GetCompletionsResponse, a, b);
   }
 }
@@ -291,7 +365,7 @@ export class AcceptCompletionRequest extends Message<AcceptCompletionRequest> {
   /**
    * @generated from field: string completion_id = 2;
    */
-  completionId = "";
+  completionId = '';
 
   constructor(data?: PartialMessage<AcceptCompletionRequest>) {
     super();
@@ -299,25 +373,48 @@ export class AcceptCompletionRequest extends Message<AcceptCompletionRequest> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.AcceptCompletionRequest";
+  static readonly typeName = 'exa.language_server_pb.AcceptCompletionRequest';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "metadata", kind: "message", T: Metadata },
-    { no: 2, name: "completion_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: 'metadata', kind: 'message', T: Metadata },
+    {
+      no: 2,
+      name: 'completion_id',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AcceptCompletionRequest {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): AcceptCompletionRequest {
     return new AcceptCompletionRequest().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AcceptCompletionRequest {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): AcceptCompletionRequest {
     return new AcceptCompletionRequest().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AcceptCompletionRequest {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): AcceptCompletionRequest {
     return new AcceptCompletionRequest().fromJsonString(jsonString, options);
   }
 
-  static equals(a: AcceptCompletionRequest | PlainMessage<AcceptCompletionRequest> | undefined, b: AcceptCompletionRequest | PlainMessage<AcceptCompletionRequest> | undefined): boolean {
+  static equals(
+    a:
+      | AcceptCompletionRequest
+      | PlainMessage<AcceptCompletionRequest>
+      | undefined,
+    b:
+      | AcceptCompletionRequest
+      | PlainMessage<AcceptCompletionRequest>
+      | undefined
+  ): boolean {
     return proto3.util.equals(AcceptCompletionRequest, a, b);
   }
 }
@@ -334,23 +431,40 @@ export class AcceptCompletionResponse extends Message<AcceptCompletionResponse> 
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.AcceptCompletionResponse";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-  ]);
+  static readonly typeName = 'exa.language_server_pb.AcceptCompletionResponse';
+  static readonly fields: FieldList = proto3.util.newFieldList(() => []);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AcceptCompletionResponse {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): AcceptCompletionResponse {
     return new AcceptCompletionResponse().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AcceptCompletionResponse {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): AcceptCompletionResponse {
     return new AcceptCompletionResponse().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AcceptCompletionResponse {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): AcceptCompletionResponse {
     return new AcceptCompletionResponse().fromJsonString(jsonString, options);
   }
 
-  static equals(a: AcceptCompletionResponse | PlainMessage<AcceptCompletionResponse> | undefined, b: AcceptCompletionResponse | PlainMessage<AcceptCompletionResponse> | undefined): boolean {
+  static equals(
+    a:
+      | AcceptCompletionResponse
+      | PlainMessage<AcceptCompletionResponse>
+      | undefined,
+    b:
+      | AcceptCompletionResponse
+      | PlainMessage<AcceptCompletionResponse>
+      | undefined
+  ): boolean {
     return proto3.util.equals(AcceptCompletionResponse, a, b);
   }
 }
@@ -367,23 +481,34 @@ export class GetAuthTokenRequest extends Message<GetAuthTokenRequest> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.GetAuthTokenRequest";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-  ]);
+  static readonly typeName = 'exa.language_server_pb.GetAuthTokenRequest';
+  static readonly fields: FieldList = proto3.util.newFieldList(() => []);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetAuthTokenRequest {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): GetAuthTokenRequest {
     return new GetAuthTokenRequest().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetAuthTokenRequest {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): GetAuthTokenRequest {
     return new GetAuthTokenRequest().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetAuthTokenRequest {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): GetAuthTokenRequest {
     return new GetAuthTokenRequest().fromJsonString(jsonString, options);
   }
 
-  static equals(a: GetAuthTokenRequest | PlainMessage<GetAuthTokenRequest> | undefined, b: GetAuthTokenRequest | PlainMessage<GetAuthTokenRequest> | undefined): boolean {
+  static equals(
+    a: GetAuthTokenRequest | PlainMessage<GetAuthTokenRequest> | undefined,
+    b: GetAuthTokenRequest | PlainMessage<GetAuthTokenRequest> | undefined
+  ): boolean {
     return proto3.util.equals(GetAuthTokenRequest, a, b);
   }
 }
@@ -397,12 +522,12 @@ export class GetAuthTokenResponse extends Message<GetAuthTokenResponse> {
   /**
    * @generated from field: string auth_token = 1;
    */
-  authToken = "";
+  authToken = '';
 
   /**
    * @generated from field: string uuid = 2;
    */
-  uuid = "";
+  uuid = '';
 
   constructor(data?: PartialMessage<GetAuthTokenResponse>) {
     super();
@@ -410,25 +535,37 @@ export class GetAuthTokenResponse extends Message<GetAuthTokenResponse> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.GetAuthTokenResponse";
+  static readonly typeName = 'exa.language_server_pb.GetAuthTokenResponse';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "auth_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "uuid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: 'auth_token', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: 'uuid', kind: 'scalar', T: 9 /* ScalarType.STRING */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetAuthTokenResponse {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): GetAuthTokenResponse {
     return new GetAuthTokenResponse().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetAuthTokenResponse {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): GetAuthTokenResponse {
     return new GetAuthTokenResponse().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetAuthTokenResponse {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): GetAuthTokenResponse {
     return new GetAuthTokenResponse().fromJsonString(jsonString, options);
   }
 
-  static equals(a: GetAuthTokenResponse | PlainMessage<GetAuthTokenResponse> | undefined, b: GetAuthTokenResponse | PlainMessage<GetAuthTokenResponse> | undefined): boolean {
+  static equals(
+    a: GetAuthTokenResponse | PlainMessage<GetAuthTokenResponse> | undefined,
+    b: GetAuthTokenResponse | PlainMessage<GetAuthTokenResponse> | undefined
+  ): boolean {
     return proto3.util.equals(GetAuthTokenResponse, a, b);
   }
 }
@@ -457,25 +594,37 @@ export class DocumentPosition extends Message<DocumentPosition> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.DocumentPosition";
+  static readonly typeName = 'exa.language_server_pb.DocumentPosition';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "row", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 2, name: "col", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
+    { no: 1, name: 'row', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ },
+    { no: 2, name: 'col', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DocumentPosition {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): DocumentPosition {
     return new DocumentPosition().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DocumentPosition {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): DocumentPosition {
     return new DocumentPosition().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DocumentPosition {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): DocumentPosition {
     return new DocumentPosition().fromJsonString(jsonString, options);
   }
 
-  static equals(a: DocumentPosition | PlainMessage<DocumentPosition> | undefined, b: DocumentPosition | PlainMessage<DocumentPosition> | undefined): boolean {
+  static equals(
+    a: DocumentPosition | PlainMessage<DocumentPosition> | undefined,
+    b: DocumentPosition | PlainMessage<DocumentPosition> | undefined
+  ): boolean {
     return proto3.util.equals(DocumentPosition, a, b);
   }
 }
@@ -489,26 +638,26 @@ export class Document extends Message<Document> {
   /**
    * @generated from field: string absolute_path = 1;
    */
-  absolutePath = "";
+  absolutePath = '';
 
   /**
    * Path relative to the root of the workspace.
    *
    * @generated from field: string relative_path = 2;
    */
-  relativePath = "";
+  relativePath = '';
 
   /**
    * @generated from field: string text = 3;
    */
-  text = "";
+  text = '';
 
   /**
    * Language ID provided by the editor.
    *
    * @generated from field: string editor_language = 4;
    */
-  editorLanguage = "";
+  editorLanguage = '';
 
   /**
    * Language enum standardized across editors.
@@ -536,7 +685,7 @@ export class Document extends Message<Document> {
    *
    * @generated from field: string line_ending = 7;
    */
-  lineEnding = "";
+  lineEnding = '';
 
   constructor(data?: PartialMessage<Document>) {
     super();
@@ -544,31 +693,63 @@ export class Document extends Message<Document> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.Document";
+  static readonly typeName = 'exa.language_server_pb.Document';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "absolute_path", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "relative_path", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "editor_language", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "language", kind: "enum", T: proto3.getEnumType(Language) },
-    { no: 6, name: "cursor_offset", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 8, name: "cursor_position", kind: "message", T: DocumentPosition },
-    { no: 7, name: "line_ending", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    {
+      no: 1,
+      name: 'absolute_path',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    {
+      no: 2,
+      name: 'relative_path',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 3, name: 'text', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 4,
+      name: 'editor_language',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 5, name: 'language', kind: 'enum', T: proto3.getEnumType(Language) },
+    {
+      no: 6,
+      name: 'cursor_offset',
+      kind: 'scalar',
+      T: 4 /* ScalarType.UINT64 */
+    },
+    { no: 8, name: 'cursor_position', kind: 'message', T: DocumentPosition },
+    { no: 7, name: 'line_ending', kind: 'scalar', T: 9 /* ScalarType.STRING */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Document {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Document {
     return new Document().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Document {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Document {
     return new Document().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Document {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Document {
     return new Document().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Document | PlainMessage<Document> | undefined, b: Document | PlainMessage<Document> | undefined): boolean {
+  static equals(
+    a: Document | PlainMessage<Document> | undefined,
+    b: Document | PlainMessage<Document> | undefined
+  ): boolean {
     return proto3.util.equals(Document, a, b);
   }
 }
@@ -588,24 +769,42 @@ export class ExperimentConfig extends Message<ExperimentConfig> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.ExperimentConfig";
+  static readonly typeName = 'exa.language_server_pb.ExperimentConfig';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "force_enable_experiments", kind: "enum", T: proto3.getEnumType(ExperimentKey), repeated: true },
+    {
+      no: 1,
+      name: 'force_enable_experiments',
+      kind: 'enum',
+      T: proto3.getEnumType(ExperimentKey),
+      repeated: true
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ExperimentConfig {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): ExperimentConfig {
     return new ExperimentConfig().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ExperimentConfig {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): ExperimentConfig {
     return new ExperimentConfig().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ExperimentConfig {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): ExperimentConfig {
     return new ExperimentConfig().fromJsonString(jsonString, options);
   }
 
-  static equals(a: ExperimentConfig | PlainMessage<ExperimentConfig> | undefined, b: ExperimentConfig | PlainMessage<ExperimentConfig> | undefined): boolean {
+  static equals(
+    a: ExperimentConfig | PlainMessage<ExperimentConfig> | undefined,
+    b: ExperimentConfig | PlainMessage<ExperimentConfig> | undefined
+  ): boolean {
     return proto3.util.equals(ExperimentConfig, a, b);
   }
 }
@@ -624,7 +823,7 @@ export class State extends Message<State> {
   /**
    * @generated from field: string message = 2;
    */
-  message = "";
+  message = '';
 
   constructor(data?: PartialMessage<State>) {
     super();
@@ -632,25 +831,37 @@ export class State extends Message<State> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.State";
+  static readonly typeName = 'exa.language_server_pb.State';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "state", kind: "enum", T: proto3.getEnumType(CodeiumState) },
-    { no: 2, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: 'state', kind: 'enum', T: proto3.getEnumType(CodeiumState) },
+    { no: 2, name: 'message', kind: 'scalar', T: 9 /* ScalarType.STRING */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): State {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): State {
     return new State().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): State {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): State {
     return new State().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): State {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): State {
     return new State().fromJsonString(jsonString, options);
   }
 
-  static equals(a: State | PlainMessage<State> | undefined, b: State | PlainMessage<State> | undefined): boolean {
+  static equals(
+    a: State | PlainMessage<State> | undefined,
+    b: State | PlainMessage<State> | undefined
+  ): boolean {
     return proto3.util.equals(State, a, b);
   }
 }
@@ -687,27 +898,44 @@ export class Range extends Message<Range> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.Range";
+  static readonly typeName = 'exa.language_server_pb.Range';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "start_offset", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 2, name: "end_offset", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 3, name: "start_position", kind: "message", T: DocumentPosition },
-    { no: 4, name: "end_position", kind: "message", T: DocumentPosition },
+    {
+      no: 1,
+      name: 'start_offset',
+      kind: 'scalar',
+      T: 4 /* ScalarType.UINT64 */
+    },
+    { no: 2, name: 'end_offset', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ },
+    { no: 3, name: 'start_position', kind: 'message', T: DocumentPosition },
+    { no: 4, name: 'end_position', kind: 'message', T: DocumentPosition }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Range {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Range {
     return new Range().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Range {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Range {
     return new Range().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Range {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Range {
     return new Range().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Range | PlainMessage<Range> | undefined, b: Range | PlainMessage<Range> | undefined): boolean {
+  static equals(
+    a: Range | PlainMessage<Range> | undefined,
+    b: Range | PlainMessage<Range> | undefined
+  ): boolean {
     return proto3.util.equals(Range, a, b);
   }
 }
@@ -721,7 +949,7 @@ export class Suffix extends Message<Suffix> {
    *
    * @generated from field: string text = 1;
    */
-  text = "";
+  text = '';
 
   /**
    * Cursor position delta (as signed offset) from the end of the inserted
@@ -737,25 +965,42 @@ export class Suffix extends Message<Suffix> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.Suffix";
+  static readonly typeName = 'exa.language_server_pb.Suffix';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "delta_cursor_offset", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 1, name: 'text', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 2,
+      name: 'delta_cursor_offset',
+      kind: 'scalar',
+      T: 3 /* ScalarType.INT64 */
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Suffix {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Suffix {
     return new Suffix().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Suffix {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Suffix {
     return new Suffix().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Suffix {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Suffix {
     return new Suffix().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Suffix | PlainMessage<Suffix> | undefined, b: Suffix | PlainMessage<Suffix> | undefined): boolean {
+  static equals(
+    a: Suffix | PlainMessage<Suffix> | undefined,
+    b: Suffix | PlainMessage<Suffix> | undefined
+  ): boolean {
     return proto3.util.equals(Suffix, a, b);
   }
 }
@@ -771,7 +1016,7 @@ export class CompletionPart extends Message<CompletionPart> {
   /**
    * @generated from field: string text = 1;
    */
-  text = "";
+  text = '';
 
   /**
    * Offset in the original document where the part starts. For block
@@ -792,7 +1037,7 @@ export class CompletionPart extends Message<CompletionPart> {
    *
    * @generated from field: string prefix = 4;
    */
-  prefix = "";
+  prefix = '';
 
   /**
    * In the case of COMPLETION_PART_TYPE_BLOCK, represents the line it is below.
@@ -807,28 +1052,45 @@ export class CompletionPart extends Message<CompletionPart> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.CompletionPart";
+  static readonly typeName = 'exa.language_server_pb.CompletionPart';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "offset", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 3, name: "type", kind: "enum", T: proto3.getEnumType(CompletionPartType) },
-    { no: 4, name: "prefix", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "line", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
+    { no: 1, name: 'text', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: 'offset', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ },
+    {
+      no: 3,
+      name: 'type',
+      kind: 'enum',
+      T: proto3.getEnumType(CompletionPartType)
+    },
+    { no: 4, name: 'prefix', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: 'line', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionPart {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): CompletionPart {
     return new CompletionPart().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionPart {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): CompletionPart {
     return new CompletionPart().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionPart {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): CompletionPart {
     return new CompletionPart().fromJsonString(jsonString, options);
   }
 
-  static equals(a: CompletionPart | PlainMessage<CompletionPart> | undefined, b: CompletionPart | PlainMessage<CompletionPart> | undefined): boolean {
+  static equals(
+    a: CompletionPart | PlainMessage<CompletionPart> | undefined,
+    b: CompletionPart | PlainMessage<CompletionPart> | undefined
+  ): boolean {
     return proto3.util.equals(CompletionPart, a, b);
   }
 }
@@ -870,29 +1132,51 @@ export class CompletionItem extends Message<CompletionItem> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.language_server_pb.CompletionItem";
+  static readonly typeName = 'exa.language_server_pb.CompletionItem';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "completion", kind: "message", T: Completion },
-    { no: 5, name: "suffix", kind: "message", T: Suffix },
-    { no: 2, name: "range", kind: "message", T: Range },
-    { no: 3, name: "source", kind: "enum", T: proto3.getEnumType(CompletionSource) },
-    { no: 8, name: "completion_parts", kind: "message", T: CompletionPart, repeated: true },
+    { no: 1, name: 'completion', kind: 'message', T: Completion },
+    { no: 5, name: 'suffix', kind: 'message', T: Suffix },
+    { no: 2, name: 'range', kind: 'message', T: Range },
+    {
+      no: 3,
+      name: 'source',
+      kind: 'enum',
+      T: proto3.getEnumType(CompletionSource)
+    },
+    {
+      no: 8,
+      name: 'completion_parts',
+      kind: 'message',
+      T: CompletionPart,
+      repeated: true
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionItem {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): CompletionItem {
     return new CompletionItem().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionItem {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): CompletionItem {
     return new CompletionItem().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionItem {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): CompletionItem {
     return new CompletionItem().fromJsonString(jsonString, options);
   }
 
-  static equals(a: CompletionItem | PlainMessage<CompletionItem> | undefined, b: CompletionItem | PlainMessage<CompletionItem> | undefined): boolean {
+  static equals(
+    a: CompletionItem | PlainMessage<CompletionItem> | undefined,
+    b: CompletionItem | PlainMessage<CompletionItem> | undefined
+  ): boolean {
     return proto3.util.equals(CompletionItem, a, b);
   }
 }
-

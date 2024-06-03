@@ -5,8 +5,15 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
+import type {
+  BinaryReadOptions,
+  FieldList,
+  JsonReadOptions,
+  JsonValue,
+  PartialMessage,
+  PlainMessage
+} from '@bufbuild/protobuf';
+import { Message, proto3, protoInt64 } from '@bufbuild/protobuf';
 
 /**
  * @generated from enum exa.codeium_common_pb.ExperimentKey
@@ -20,12 +27,12 @@ export enum ExperimentKey {
   /**
    * @generated from enum value: JUPYTER_FORMAT = 77;
    */
-  JUPYTER_FORMAT = 77,
+  JUPYTER_FORMAT = 77
 }
 // Retrieve enum metadata with: proto3.getEnumType(ExperimentKey)
-proto3.util.setEnumType(ExperimentKey, "exa.codeium_common_pb.ExperimentKey", [
-  { no: 0, name: "UNSPECIFIED" },
-  { no: 77, name: "JUPYTER_FORMAT" },
+proto3.util.setEnumType(ExperimentKey, 'exa.codeium_common_pb.ExperimentKey', [
+  { no: 0, name: 'UNSPECIFIED' },
+  { no: 77, name: 'JUPYTER_FORMAT' }
 ]);
 
 /**
@@ -37,11 +44,11 @@ export enum AuthSource {
   /**
    * @generated from enum value: AUTH_SOURCE_CODEIUM = 0;
    */
-  CODEIUM = 0,
+  CODEIUM = 0
 }
 // Retrieve enum metadata with: proto3.getEnumType(AuthSource)
-proto3.util.setEnumType(AuthSource, "exa.codeium_common_pb.AuthSource", [
-  { no: 0, name: "AUTH_SOURCE_CODEIUM" },
+proto3.util.setEnumType(AuthSource, 'exa.codeium_common_pb.AuthSource', [
+  { no: 0, name: 'AUTH_SOURCE_CODEIUM' }
 ]);
 
 /**
@@ -71,15 +78,15 @@ export enum EventType {
   /**
    * @generated from enum value: EVENT_TYPE_SHOW_NEXT_COMPLETION = 4;
    */
-  SHOW_NEXT_COMPLETION = 4,
+  SHOW_NEXT_COMPLETION = 4
 }
 // Retrieve enum metadata with: proto3.getEnumType(EventType)
-proto3.util.setEnumType(EventType, "exa.codeium_common_pb.EventType", [
-  { no: 0, name: "EVENT_TYPE_UNSPECIFIED" },
-  { no: 1, name: "EVENT_TYPE_ENABLE_CODEIUM" },
-  { no: 2, name: "EVENT_TYPE_DISABLE_CODEIUM" },
-  { no: 3, name: "EVENT_TYPE_SHOW_PREVIOUS_COMPLETION" },
-  { no: 4, name: "EVENT_TYPE_SHOW_NEXT_COMPLETION" },
+proto3.util.setEnumType(EventType, 'exa.codeium_common_pb.EventType', [
+  { no: 0, name: 'EVENT_TYPE_UNSPECIFIED' },
+  { no: 1, name: 'EVENT_TYPE_ENABLE_CODEIUM' },
+  { no: 2, name: 'EVENT_TYPE_DISABLE_CODEIUM' },
+  { no: 3, name: 'EVENT_TYPE_SHOW_PREVIOUS_COMPLETION' },
+  { no: 4, name: 'EVENT_TYPE_SHOW_NEXT_COMPLETION' }
 ]);
 
 /**
@@ -104,15 +111,19 @@ export enum CompletionSource {
   /**
    * @generated from enum value: COMPLETION_SOURCE_NETWORK = 3;
    */
-  NETWORK = 3,
+  NETWORK = 3
 }
 // Retrieve enum metadata with: proto3.getEnumType(CompletionSource)
-proto3.util.setEnumType(CompletionSource, "exa.codeium_common_pb.CompletionSource", [
-  { no: 0, name: "COMPLETION_SOURCE_UNSPECIFIED" },
-  { no: 1, name: "COMPLETION_SOURCE_TYPING_AS_SUGGESTED" },
-  { no: 2, name: "COMPLETION_SOURCE_CACHE" },
-  { no: 3, name: "COMPLETION_SOURCE_NETWORK" },
-]);
+proto3.util.setEnumType(
+  CompletionSource,
+  'exa.codeium_common_pb.CompletionSource',
+  [
+    { no: 0, name: 'COMPLETION_SOURCE_UNSPECIFIED' },
+    { no: 1, name: 'COMPLETION_SOURCE_TYPING_AS_SUGGESTED' },
+    { no: 2, name: 'COMPLETION_SOURCE_CACHE' },
+    { no: 3, name: 'COMPLETION_SOURCE_NETWORK' }
+  ]
+);
 
 /**
  * Every time this list is updated, we should be redeploying the API server
@@ -449,76 +460,76 @@ export enum Language {
   /**
    * @generated from enum value: LANGUAGE_OCAML_INTERFACE = 65;
    */
-  OCAML_INTERFACE = 65,
+  OCAML_INTERFACE = 65
 }
 // Retrieve enum metadata with: proto3.getEnumType(Language)
-proto3.util.setEnumType(Language, "exa.codeium_common_pb.Language", [
-  { no: 0, name: "LANGUAGE_UNSPECIFIED" },
-  { no: 1, name: "LANGUAGE_C" },
-  { no: 2, name: "LANGUAGE_CLOJURE" },
-  { no: 3, name: "LANGUAGE_COFFEESCRIPT" },
-  { no: 4, name: "LANGUAGE_CPP" },
-  { no: 5, name: "LANGUAGE_CSHARP" },
-  { no: 6, name: "LANGUAGE_CSS" },
-  { no: 7, name: "LANGUAGE_CUDACPP" },
-  { no: 8, name: "LANGUAGE_DOCKERFILE" },
-  { no: 9, name: "LANGUAGE_GO" },
-  { no: 10, name: "LANGUAGE_GROOVY" },
-  { no: 11, name: "LANGUAGE_HANDLEBARS" },
-  { no: 12, name: "LANGUAGE_HASKELL" },
-  { no: 13, name: "LANGUAGE_HCL" },
-  { no: 14, name: "LANGUAGE_HTML" },
-  { no: 15, name: "LANGUAGE_INI" },
-  { no: 16, name: "LANGUAGE_JAVA" },
-  { no: 17, name: "LANGUAGE_JAVASCRIPT" },
-  { no: 18, name: "LANGUAGE_JSON" },
-  { no: 19, name: "LANGUAGE_JULIA" },
-  { no: 20, name: "LANGUAGE_KOTLIN" },
-  { no: 21, name: "LANGUAGE_LATEX" },
-  { no: 22, name: "LANGUAGE_LESS" },
-  { no: 23, name: "LANGUAGE_LUA" },
-  { no: 24, name: "LANGUAGE_MAKEFILE" },
-  { no: 25, name: "LANGUAGE_MARKDOWN" },
-  { no: 26, name: "LANGUAGE_OBJECTIVEC" },
-  { no: 27, name: "LANGUAGE_OBJECTIVECPP" },
-  { no: 28, name: "LANGUAGE_PERL" },
-  { no: 29, name: "LANGUAGE_PHP" },
-  { no: 30, name: "LANGUAGE_PLAINTEXT" },
-  { no: 31, name: "LANGUAGE_PROTOBUF" },
-  { no: 32, name: "LANGUAGE_PBTXT" },
-  { no: 33, name: "LANGUAGE_PYTHON" },
-  { no: 34, name: "LANGUAGE_R" },
-  { no: 35, name: "LANGUAGE_RUBY" },
-  { no: 36, name: "LANGUAGE_RUST" },
-  { no: 37, name: "LANGUAGE_SASS" },
-  { no: 38, name: "LANGUAGE_SCALA" },
-  { no: 39, name: "LANGUAGE_SCSS" },
-  { no: 40, name: "LANGUAGE_SHELL" },
-  { no: 41, name: "LANGUAGE_SQL" },
-  { no: 42, name: "LANGUAGE_STARLARK" },
-  { no: 43, name: "LANGUAGE_SWIFT" },
-  { no: 44, name: "LANGUAGE_TSX" },
-  { no: 45, name: "LANGUAGE_TYPESCRIPT" },
-  { no: 46, name: "LANGUAGE_VISUALBASIC" },
-  { no: 47, name: "LANGUAGE_VUE" },
-  { no: 48, name: "LANGUAGE_XML" },
-  { no: 49, name: "LANGUAGE_XSL" },
-  { no: 50, name: "LANGUAGE_YAML" },
-  { no: 51, name: "LANGUAGE_SVELTE" },
-  { no: 52, name: "LANGUAGE_TOML" },
-  { no: 53, name: "LANGUAGE_DART" },
-  { no: 54, name: "LANGUAGE_RST" },
-  { no: 55, name: "LANGUAGE_OCAML" },
-  { no: 56, name: "LANGUAGE_CMAKE" },
-  { no: 57, name: "LANGUAGE_PASCAL" },
-  { no: 58, name: "LANGUAGE_ELIXIR" },
-  { no: 59, name: "LANGUAGE_FSHARP" },
-  { no: 60, name: "LANGUAGE_LISP" },
-  { no: 61, name: "LANGUAGE_MATLAB" },
-  { no: 62, name: "LANGUAGE_POWERSHELL" },
-  { no: 63, name: "LANGUAGE_SOLIDITY" },
-  { no: 64, name: "LANGUAGE_ADA" },
-  { no: 65, name: "LANGUAGE_OCAML_INTERFACE" },
+proto3.util.setEnumType(Language, 'exa.codeium_common_pb.Language', [
+  { no: 0, name: 'LANGUAGE_UNSPECIFIED' },
+  { no: 1, name: 'LANGUAGE_C' },
+  { no: 2, name: 'LANGUAGE_CLOJURE' },
+  { no: 3, name: 'LANGUAGE_COFFEESCRIPT' },
+  { no: 4, name: 'LANGUAGE_CPP' },
+  { no: 5, name: 'LANGUAGE_CSHARP' },
+  { no: 6, name: 'LANGUAGE_CSS' },
+  { no: 7, name: 'LANGUAGE_CUDACPP' },
+  { no: 8, name: 'LANGUAGE_DOCKERFILE' },
+  { no: 9, name: 'LANGUAGE_GO' },
+  { no: 10, name: 'LANGUAGE_GROOVY' },
+  { no: 11, name: 'LANGUAGE_HANDLEBARS' },
+  { no: 12, name: 'LANGUAGE_HASKELL' },
+  { no: 13, name: 'LANGUAGE_HCL' },
+  { no: 14, name: 'LANGUAGE_HTML' },
+  { no: 15, name: 'LANGUAGE_INI' },
+  { no: 16, name: 'LANGUAGE_JAVA' },
+  { no: 17, name: 'LANGUAGE_JAVASCRIPT' },
+  { no: 18, name: 'LANGUAGE_JSON' },
+  { no: 19, name: 'LANGUAGE_JULIA' },
+  { no: 20, name: 'LANGUAGE_KOTLIN' },
+  { no: 21, name: 'LANGUAGE_LATEX' },
+  { no: 22, name: 'LANGUAGE_LESS' },
+  { no: 23, name: 'LANGUAGE_LUA' },
+  { no: 24, name: 'LANGUAGE_MAKEFILE' },
+  { no: 25, name: 'LANGUAGE_MARKDOWN' },
+  { no: 26, name: 'LANGUAGE_OBJECTIVEC' },
+  { no: 27, name: 'LANGUAGE_OBJECTIVECPP' },
+  { no: 28, name: 'LANGUAGE_PERL' },
+  { no: 29, name: 'LANGUAGE_PHP' },
+  { no: 30, name: 'LANGUAGE_PLAINTEXT' },
+  { no: 31, name: 'LANGUAGE_PROTOBUF' },
+  { no: 32, name: 'LANGUAGE_PBTXT' },
+  { no: 33, name: 'LANGUAGE_PYTHON' },
+  { no: 34, name: 'LANGUAGE_R' },
+  { no: 35, name: 'LANGUAGE_RUBY' },
+  { no: 36, name: 'LANGUAGE_RUST' },
+  { no: 37, name: 'LANGUAGE_SASS' },
+  { no: 38, name: 'LANGUAGE_SCALA' },
+  { no: 39, name: 'LANGUAGE_SCSS' },
+  { no: 40, name: 'LANGUAGE_SHELL' },
+  { no: 41, name: 'LANGUAGE_SQL' },
+  { no: 42, name: 'LANGUAGE_STARLARK' },
+  { no: 43, name: 'LANGUAGE_SWIFT' },
+  { no: 44, name: 'LANGUAGE_TSX' },
+  { no: 45, name: 'LANGUAGE_TYPESCRIPT' },
+  { no: 46, name: 'LANGUAGE_VISUALBASIC' },
+  { no: 47, name: 'LANGUAGE_VUE' },
+  { no: 48, name: 'LANGUAGE_XML' },
+  { no: 49, name: 'LANGUAGE_XSL' },
+  { no: 50, name: 'LANGUAGE_YAML' },
+  { no: 51, name: 'LANGUAGE_SVELTE' },
+  { no: 52, name: 'LANGUAGE_TOML' },
+  { no: 53, name: 'LANGUAGE_DART' },
+  { no: 54, name: 'LANGUAGE_RST' },
+  { no: 55, name: 'LANGUAGE_OCAML' },
+  { no: 56, name: 'LANGUAGE_CMAKE' },
+  { no: 57, name: 'LANGUAGE_PASCAL' },
+  { no: 58, name: 'LANGUAGE_ELIXIR' },
+  { no: 59, name: 'LANGUAGE_FSHARP' },
+  { no: 60, name: 'LANGUAGE_LISP' },
+  { no: 61, name: 'LANGUAGE_MATLAB' },
+  { no: 62, name: 'LANGUAGE_POWERSHELL' },
+  { no: 63, name: 'LANGUAGE_SOLIDITY' },
+  { no: 64, name: 'LANGUAGE_ADA' },
+  { no: 65, name: 'LANGUAGE_OCAML_INTERFACE' }
 ]);
 
 /**
@@ -530,22 +541,22 @@ export class Completion extends Message<Completion> {
   /**
    * @generated from field: string completion_id = 1;
    */
-  completionId = "";
+  completionId = '';
 
   /**
    * @generated from field: string text = 2;
    */
-  text = "";
+  text = '';
 
   /**
    * @generated from field: string prefix = 3;
    */
-  prefix = "";
+  prefix = '';
 
   /**
    * @generated from field: string stop = 4;
    */
-  stop = "";
+  stop = '';
 
   /**
    * @generated from field: double score = 5;
@@ -583,33 +594,79 @@ export class Completion extends Message<Completion> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.codeium_common_pb.Completion";
+  static readonly typeName = 'exa.codeium_common_pb.Completion';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "completion_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "prefix", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "stop", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "score", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
-    { no: 6, name: "tokens", kind: "scalar", T: 4 /* ScalarType.UINT64 */, repeated: true },
-    { no: 7, name: "decoded_tokens", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 8, name: "probabilities", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, repeated: true },
-    { no: 9, name: "adjusted_probabilities", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, repeated: true },
-    { no: 10, name: "generated_length", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
+    {
+      no: 1,
+      name: 'completion_id',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 2, name: 'text', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: 'prefix', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: 'stop', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: 'score', kind: 'scalar', T: 1 /* ScalarType.DOUBLE */ },
+    {
+      no: 6,
+      name: 'tokens',
+      kind: 'scalar',
+      T: 4 /* ScalarType.UINT64 */,
+      repeated: true
+    },
+    {
+      no: 7,
+      name: 'decoded_tokens',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */,
+      repeated: true
+    },
+    {
+      no: 8,
+      name: 'probabilities',
+      kind: 'scalar',
+      T: 1 /* ScalarType.DOUBLE */,
+      repeated: true
+    },
+    {
+      no: 9,
+      name: 'adjusted_probabilities',
+      kind: 'scalar',
+      T: 1 /* ScalarType.DOUBLE */,
+      repeated: true
+    },
+    {
+      no: 10,
+      name: 'generated_length',
+      kind: 'scalar',
+      T: 4 /* ScalarType.UINT64 */
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Completion {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Completion {
     return new Completion().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Completion {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Completion {
     return new Completion().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Completion {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Completion {
     return new Completion().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Completion | PlainMessage<Completion> | undefined, b: Completion | PlainMessage<Completion> | undefined): boolean {
+  static equals(
+    a: Completion | PlainMessage<Completion> | undefined,
+    b: Completion | PlainMessage<Completion> | undefined
+  ): boolean {
     return proto3.util.equals(Completion, a, b);
   }
 }
@@ -623,27 +680,27 @@ export class Metadata extends Message<Metadata> {
   /**
    * @generated from field: string ide_name = 1;
    */
-  ideName = "";
+  ideName = '';
 
   /**
    * @generated from field: string ide_version = 7;
    */
-  ideVersion = "";
+  ideVersion = '';
 
   /**
    * @generated from field: string extension_name = 12;
    */
-  extensionName = "";
+  extensionName = '';
 
   /**
    * @generated from field: string extension_version = 2;
    */
-  extensionVersion = "";
+  extensionVersion = '';
 
   /**
    * @generated from field: string api_key = 3;
    */
-  apiKey = "";
+  apiKey = '';
 
   /**
    * Regex derived from https://stackoverflow.com/a/48300605.
@@ -651,14 +708,14 @@ export class Metadata extends Message<Metadata> {
    *
    * @generated from field: string locale = 4;
    */
-  locale = "";
+  locale = '';
 
   /**
    * UID identifying a single session for the given user.
    *
    * @generated from field: string session_id = 10;
    */
-  sessionId = "";
+  sessionId = '';
 
   /**
    * Used purely in language server to cancel in flight requests.
@@ -675,12 +732,12 @@ export class Metadata extends Message<Metadata> {
    *
    * @generated from field: string user_agent = 13;
    */
-  userAgent = "";
+  userAgent = '';
 
   /**
    * @generated from field: string url = 14;
    */
-  url = "";
+  url = '';
 
   /**
    * Authentication source information.
@@ -695,34 +752,76 @@ export class Metadata extends Message<Metadata> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.codeium_common_pb.Metadata";
+  static readonly typeName = 'exa.codeium_common_pb.Metadata';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "ide_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 7, name: "ide_version", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 12, name: "extension_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "extension_version", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "api_key", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "locale", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 10, name: "session_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 9, name: "request_id", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 13, name: "user_agent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 14, name: "url", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 15, name: "auth_source", kind: "enum", T: proto3.getEnumType(AuthSource) },
+    { no: 1, name: 'ide_name', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 7,
+      name: 'ide_version',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    {
+      no: 12,
+      name: 'extension_name',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    {
+      no: 2,
+      name: 'extension_version',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 3, name: 'api_key', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: 'locale', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 10,
+      name: 'session_id',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 9, name: 'request_id', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ },
+    {
+      no: 13,
+      name: 'user_agent',
+      kind: 'scalar',
+      T: 9 /* ScalarType.STRING */
+    },
+    { no: 14, name: 'url', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 15,
+      name: 'auth_source',
+      kind: 'enum',
+      T: proto3.getEnumType(AuthSource)
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Metadata {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Metadata {
     return new Metadata().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Metadata {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Metadata {
     return new Metadata().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Metadata {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Metadata {
     return new Metadata().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Metadata | PlainMessage<Metadata> | undefined, b: Metadata | PlainMessage<Metadata> | undefined): boolean {
+  static equals(
+    a: Metadata | PlainMessage<Metadata> | undefined,
+    b: Metadata | PlainMessage<Metadata> | undefined
+  ): boolean {
     return proto3.util.equals(Metadata, a, b);
   }
 }
@@ -749,25 +848,37 @@ export class EditorOptions extends Message<EditorOptions> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.codeium_common_pb.EditorOptions";
+  static readonly typeName = 'exa.codeium_common_pb.EditorOptions';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "tab_size", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 2, name: "insert_spaces", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 1, name: 'tab_size', kind: 'scalar', T: 4 /* ScalarType.UINT64 */ },
+    { no: 2, name: 'insert_spaces', kind: 'scalar', T: 8 /* ScalarType.BOOL */ }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EditorOptions {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): EditorOptions {
     return new EditorOptions().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EditorOptions {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): EditorOptions {
     return new EditorOptions().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EditorOptions {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): EditorOptions {
     return new EditorOptions().fromJsonString(jsonString, options);
   }
 
-  static equals(a: EditorOptions | PlainMessage<EditorOptions> | undefined, b: EditorOptions | PlainMessage<EditorOptions> | undefined): boolean {
+  static equals(
+    a: EditorOptions | PlainMessage<EditorOptions> | undefined,
+    b: EditorOptions | PlainMessage<EditorOptions> | undefined
+  ): boolean {
     return proto3.util.equals(EditorOptions, a, b);
   }
 }
@@ -784,7 +895,7 @@ export class Event extends Message<Event> {
   /**
    * @generated from field: string event_json = 2;
    */
-  eventJson = "";
+  eventJson = '';
 
   /**
    * @generated from field: int64 timestamp_unix_ms = 3;
@@ -797,27 +908,48 @@ export class Event extends Message<Event> {
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "exa.codeium_common_pb.Event";
+  static readonly typeName = 'exa.codeium_common_pb.Event';
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "event_type", kind: "enum", T: proto3.getEnumType(EventType) },
-    { no: 2, name: "event_json", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "timestamp_unix_ms", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    {
+      no: 1,
+      name: 'event_type',
+      kind: 'enum',
+      T: proto3.getEnumType(EventType)
+    },
+    { no: 2, name: 'event_json', kind: 'scalar', T: 9 /* ScalarType.STRING */ },
+    {
+      no: 3,
+      name: 'timestamp_unix_ms',
+      kind: 'scalar',
+      T: 3 /* ScalarType.INT64 */
+    }
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Event {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): Event {
     return new Event().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Event {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): Event {
     return new Event().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Event {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): Event {
     return new Event().fromJsonString(jsonString, options);
   }
 
-  static equals(a: Event | PlainMessage<Event> | undefined, b: Event | PlainMessage<Event> | undefined): boolean {
+  static equals(
+    a: Event | PlainMessage<Event> | undefined,
+    b: Event | PlainMessage<Event> | undefined
+  ): boolean {
     return proto3.util.equals(Event, a, b);
   }
 }
-
