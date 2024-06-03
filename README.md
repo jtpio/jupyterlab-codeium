@@ -1,6 +1,7 @@
 # jupyterlab-codeium
 
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-codeium/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-codeium/actions/workflows/build.yml)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jtpio.github.io/jupyterlab-codeium/lab/index.html)
 
 JupyterLab extension to get AI code completions with [Codeium](https://codeium.com/).
 
