@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.1
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: ''
+author_name: Jeremy Tuloup
+has_binder: false
+has_settings: true
+kind: frontend
+labextension_name: jupyterlab-codeium
+project_short_description: A JupyterLab extension to get AI code completion with codeium
+python_name: jupyterlab_codeium
+repository: https://github.com/jtpio/jupyterlab-codeium
+test: false
+
