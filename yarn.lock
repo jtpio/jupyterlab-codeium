@@ -732,7 +732,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyterlab/codemirror@npm:^4.2.1":
+"@jupyterlab/codemirror@npm:^4.0.0, @jupyterlab/codemirror@npm:^4.2.1":
   version: 4.2.1
   resolution: "@jupyterlab/codemirror@npm:4.2.1"
   dependencies:
@@ -3976,6 +3976,7 @@ __metadata:
     "@jupyterlab/application": ^4.0.0
     "@jupyterlab/apputils": ^4.0.0
     "@jupyterlab/builder": ^4.0.0
+    "@jupyterlab/codemirror": ^4.0.0
     "@jupyterlab/completer": ^4.0.0
     "@jupyterlab/settingregistry": ^4.0.0
     "@lumino/coreutils": ^2.1.2
