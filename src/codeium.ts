@@ -5,6 +5,7 @@ import { UUID } from '@lumino/coreutils';
 
 import { createPromiseClient } from '@connectrpc/connect';
 import { LanguageServerService } from './api/proto/exa/language_server_pb/language_server_connect';
+import { Language } from './api/proto/exa/codeium_common_pb/codeium_common_pb';
 import { createConnectTransport } from '@connectrpc/connect-web';
 import {
   Document,
@@ -33,6 +34,8 @@ export async function getCodeiumCompletions({
   config: ICodeiumConfig;
   otherDocuments: PartialMessage<Document>[];
 }) {
+  const lang = config.language;
+  const language = Language[lang?.toUpperCase() as keyof typeof Language];
   return await client.getCompletions(
     {
       metadata: {
@@ -48,8 +51,8 @@ export async function getCodeiumCompletions({
       document: {
         text: text,
         cursorOffset: BigInt(cursorOffset),
-        language: config.language,
-        editorLanguage: 'python',
+        language,
+        editorLanguage: lang ?? 'python',
         lineEnding: '\n'
       },
       editorOptions: {
