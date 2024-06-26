@@ -48,15 +48,11 @@ pip install jupyterlab-codeium
 
 ![Enter Token](./img/2-api-key.png)
 
-7. Start JupyterLab. At first launch you should see the following dialog:
-
-![Enter API Key](./img/3-jupyterlab-dialog.png)
-
-8. Go to the settings to paste the API key:
+7. Go to the settings to paste the API key:
 
 ![Settings](./img/4-jupyterlab-settings.png)
 
-9. You should now be able to use the extension. Open a Python file and start typing to see the completions.
+8. You should now be able to use the extension. Open a Python file and start typing to see the completions.
 
 ![Completions](./img/5-example.png)
 

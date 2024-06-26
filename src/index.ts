@@ -2,7 +2,6 @@ import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
-import { Dialog, showDialog } from '@jupyterlab/apputils';
 import { IEditorLanguageRegistry } from '@jupyterlab/codemirror';
 import { ICompletionProviderManager } from '@jupyterlab/completer';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
@@ -31,16 +30,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
         const updateKey = () => {
           const apiKey = settings.get('apiKey').composite as string;
           provider.apiKey = apiKey;
-
-          if (!apiKey) {
-            const message = 'Codeium API key is not set';
-            console.warn(message);
-            void showDialog({
-              title: message,
-              body: 'Please set the Codeium API key in the settings editor',
-              buttons: [Dialog.okButton()]
-            });
-          }
         };
 
         settings.changed.connect(() => updateKey());
