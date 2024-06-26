@@ -55,6 +55,7 @@
     "dependencies": {
         "@connectrpc/connect": "^1.4.0",
         "@connectrpc/connect-web": "^1.4.0",
+        "@jupyter/chat": "^0.1.0",
         "@jupyterlab/application": "^4.0.0",
         "@jupyterlab/apputils": "^4.0.0",
         "@jupyterlab/codemirror": "^4.0.0",
