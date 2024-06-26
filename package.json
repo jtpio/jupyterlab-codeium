@@ -56,7 +56,6 @@
         "@connectrpc/connect": "^1.4.0",
         "@connectrpc/connect-web": "^1.4.0",
         "@jupyterlab/application": "^4.0.0",
-        "@jupyterlab/apputils": "^4.0.0",
         "@jupyterlab/codemirror": "^4.0.0",
         "@jupyterlab/completer": "^4.0.0",
         "@jupyterlab/settingregistry": "^4.0.0",
