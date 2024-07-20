@@ -18,4 +18,11 @@ export interface ICodeiumConfig {
   timeout?: number;
 
   authSource?: number;
+
+  /**
+   * The name/version of the ide, e.g. 'JupyterLab 4.2.3'
+   */
+  ideName?: string;
+
+  ideVersion?: string;
 }

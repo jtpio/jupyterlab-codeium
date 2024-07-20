@@ -1,69 +1,46 @@
-# jupyterlab-codeium
+# Codeium: Free AI-powered code acceleration
 
-[![Github Actions Status](https://github.com/jtpio/jupyterlab-codeium/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-codeium/actions/workflows/build.yml)
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jtpio.github.io/jupyterlab-codeium/lab/index.html)
+Originally forked from Jeremy Tuloup's [jupyterlab-codeium](https://github.com/jtpio/jupyterlab-codeium)
 
-JupyterLab extension to get AI code completions with [Codeium](https://codeium.com/).
-
-https://github.com/jtpio/jupyterlab-codeium/assets/591645/7ec0a6fa-9c51-49a8-89b4-77b431f4bda9
-
-> [!WARNING]
-> This extension is still very much experimental. It is not an official Codeium extension.
-
-## ✨ Try it in your browser ✨
-
-1. Follow the instructions in the [Usage](#usage) section to get your API key.
-2. Open https://jtpio.github.io/jupyterlab-codeium in your browser
-
-## Requirements
-
-- JupyterLab >= 4.1.0
-
-> [!NOTE]
-> This extension is also compatible with [JupyterLite](https://github.com/jupyterlite/jupyterlite) >= 0.3.0
-
-## Install
-
-To install the extension, execute:
+## Installation
 
 ```bash
-pip install jupyterlab-codeium
+   pip install codeium-jupyter
 ```
 
-## Usage
+## What is Codeium
 
-> [!WARNING]
-> Setting up the extension requires a Codeium API key. This part might still be challenging as retrieving the key requires a few manual steps at the moment.
-> This might later be improved by providing a better auth flow.
+[Codeium](https://www.codeium.com) is the modern coding superpower, a
+**free** code acceleration toolkit built on cutting edge AI technology.
+Currently, Codeium provides code completion tool in over 70+ languages,
+with lightning fast speeds and state-of-the-art suggestion quality.
 
-1. Go to the Codeium website and sign up for an account: https://codeium.com/
-2. Install the browser extension: https://codeium.com/chrome_tutorial
-3. Open the settings for the chrome extension and click on "Get Token"
+There are many parts of the modern coding workflow that are boring,
+tedious, or frustrating, from regurgitating boilerplate to poring
+through StackOverflow. Recent advances in AI allow us to eliminate these
+parts, making it seamless to turn your ideas into code. With easy
+integration into Visual Studio Code and a less than 2 minute
+installation process, you can focus on being the best software
+developer, not the best code monkey.
 
-![Get Token](./img/1-extension-token.png)
+With Codeium, you get:
 
-4. Right click on the extension window and select "Inspect" to open the dev tools for the extension. Then click on "Network"
-5. Copy the token and paste it the input area, and then press "Enter Token"
-6. This should log a new API request in the network tab. Click on "Preview" to get the API key.
+-  Unlimited single and multi-line code completions forever
+-  Support for 70+ programming languages: Javascript, Python,
+   Typescript, PHP, Go, Java, C, C++, Rust, Ruby, and more.
 
-![Enter Token](./img/2-api-key.png)
+Join thousands of other developers who are using Codeium for free to
+accelerate their software iteration process, improve their code quality
+and consistency, reduce the number of code review iterations, accelerate
+developer onboarding, and keep them in their flow state. Want to learn
+more? Check out our [FAQ](https://www.codeium.com/faq).
 
-7. Go to the settings to paste the API key:
 
-![Settings](./img/4-jupyterlab-settings.png)
+## Support, Feedback, and Community
 
-8. You should now be able to use the extension. Open a Python file and start typing to see the completions.
+We are actively working on improving the quality of the extension.
+Please feel free to report any issues, suggestions, or exciting /
+interesting suggestions in [our active Discord
+community](https://discord.gg/3XFf78nAx5)!
 
-![Completions](./img/5-example.png)
-
-## Contributing
-
-### Packaging and releasing the extension
-
-See [RELEASE](RELEASE.md)
-
-### Credits
-
-Many thanks to the `codemirror-codeium` project for the inspiration and the initial implementation of the Codeium integration with CodeMirror 6: https://github.com/val-town/codemirror-codeium
-
-The protobuf files were copied from that repo and reused as is in this project.
+**We hope you enjoy Codeium, your modern coding superpower!**

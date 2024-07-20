@@ -10,7 +10,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the jupyterlab_codeium directory
+# Change directory to the codeium_jupyter directory
 # Install package in development mode
 pip install -e "."
 # Link your development version of the extension with JupyterLab

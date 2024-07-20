@@ -7,9 +7,10 @@ node_modules/
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
-jupyterlab_codeium/labextension
+codeium_jupyter/labextension
+src/api/proto
 # Version file is handled by hatchling
-jupyterlab_codeium/_version.py
+codeium_jupyter/_version.py
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python

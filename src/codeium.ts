@@ -3,32 +3,26 @@
 
 import { UUID } from '@lumino/coreutils';
 
-import { createPromiseClient } from '@connectrpc/connect';
+import { PromiseClient } from '@connectrpc/connect';
 import { LanguageServerService } from './api/proto/exa/language_server_pb/language_server_connect';
-import { Language } from './api/proto/exa/codeium_common_pb/codeium_common_pb';
-import { createConnectTransport } from '@connectrpc/connect-web';
 import {
-  Document,
-  GetCompletionsResponse
-} from './api/proto/exa/language_server_pb/language_server_pb';
+  Language,
+  Document
+} from './api/proto/exa/codeium_common_pb/codeium_common_pb';
+import { GetCompletionsResponse } from './api/proto/exa/language_server_pb/language_server_pb';
 import { ICodeiumConfig } from './config';
 import { type PartialMessage } from '@bufbuild/protobuf';
-
-const transport = createConnectTransport({
-  baseUrl: 'https://server.codeium.com',
-  useBinaryFormat: true
-});
-
-const client = createPromiseClient(LanguageServerService, transport);
 
 const sessionId = UUID.uuid4();
 
 export async function getCodeiumCompletions({
+  client,
   text,
   cursorOffset,
   config,
   otherDocuments
 }: {
+  client: PromiseClient<typeof LanguageServerService>;
   text: string;
   cursorOffset: number;
   config: ICodeiumConfig;
@@ -39,11 +33,10 @@ export async function getCodeiumCompletions({
   return await client.getCompletions(
     {
       metadata: {
-        // TODO: read metadata from app
-        ideName: 'web',
-        ideVersion: '0.0.5',
-        extensionName: 'TODO',
-        extensionVersion: '1.0.0',
+        ideName: config.ideName,
+        ideVersion: config.ideVersion,
+        extensionName: 'codeium-jupyter',
+        extensionVersion: '1.8.80',
         apiKey: config.apiKey,
         sessionId: sessionId,
         authSource: config.authSource
@@ -56,7 +49,7 @@ export async function getCodeiumCompletions({
         lineEnding: '\n'
       },
       editorOptions: {
-        tabSize: 2n,
+        tabSize: 4n,
         insertSpaces: true
       },
       otherDocuments: otherDocuments,
@@ -71,16 +64,27 @@ export async function getCodeiumCompletions({
   );
 }
 
+// TODO (kevin): There are still occasional indentation errors
 export function simplifyCompletions(completions: GetCompletionsResponse) {
-  return completions.completionItems[0]!.completionParts.filter(part => {
-    // Type 3 overwrites existing text. Maybe we need this eventually,
-    // but not right now and it usually is duplicative.
-    return part.type !== 3;
-  }).map(part => {
+  return completions.completionItems.map(item => {
+    let offset = 0;
+    let firstLine = '';
+    let remainingLines = '';
+
+    for (const part of item.completionParts) {
+      if (part.type === 1) {
+        firstLine += part.text;
+        offset = Number(part.offset);
+      }
+      if (part.type === 2) {
+        remainingLines = '\n' + part.text;
+      }
+    }
+
     return {
-      ...part,
-      offset: Number(part.offset),
-      text: part.type === 2 ? `\n${part.text}` : part.text
+      ...item,
+      offset: offset,
+      completion: firstLine + remainingLines
     };
   });
 }
