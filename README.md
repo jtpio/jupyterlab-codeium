@@ -8,6 +8,9 @@ JupyterLab extension to get AI code completions with [Codeium](https://codeium.c
 https://github.com/jtpio/jupyterlab-codeium/assets/591645/7ec0a6fa-9c51-49a8-89b4-77b431f4bda9
 
 > [!WARNING]
+> The Codeium team forked this repo to continue the development: https://github.com/Exafunction/codeium.jupyter
+
+> [!WARNING]
 > This extension is still very much experimental. It is not an official Codeium extension.
 
 ## ✨ Try it in your browser ✨
